@@ -9,6 +9,6 @@ import idea.verlif.socketpoint.listener.MessageListener;
 public class DefaultMessageListener implements MessageListener {
     @Override
     public void receive(EndPoint endPoint, String message) {
-
+        // 不做消息接收处理
     }
 }

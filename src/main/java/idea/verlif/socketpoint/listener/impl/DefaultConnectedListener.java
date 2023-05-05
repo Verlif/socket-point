@@ -9,6 +9,6 @@ import idea.verlif.socketpoint.listener.ConnectedListener;
 public class DefaultConnectedListener implements ConnectedListener {
     @Override
     public void onConnected(EndPoint endPoint) {
-
+        // 连接时不做操作
     }
 }

@@ -27,8 +27,9 @@ public abstract class ReceiveHolder implements Runnable {
                 receive(scanner.nextLine());
             }
         } catch (NoSuchElementException ignored) {
+            // 断开连接
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new EndPointException(e);
         }
         onClosed(target);
     }

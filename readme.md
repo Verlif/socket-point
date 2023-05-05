@@ -15,6 +15,8 @@
 ## 实例
 
 ```java
+import idea.verlif.socketpoint.EndPointException;
+
 public class MainTest {
 
     public static void main(String[] args) {
@@ -36,7 +38,7 @@ public class MainTest {
             try {
                 socketPoint.start(new SocketConfig().max(2).tied(1));
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                throw new EndPointException(e);
             }
         }).start();
 

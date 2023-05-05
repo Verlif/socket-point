@@ -9,5 +9,6 @@ import idea.verlif.socketpoint.listener.ClosedListener;
 public class DefaultClosedListener implements ClosedListener {
     @Override
     public void onClosed(EndPoint endPoint) {
+        // 关闭时不做操作
     }
 }

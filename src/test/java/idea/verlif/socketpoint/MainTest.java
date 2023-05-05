@@ -23,7 +23,7 @@ public class MainTest {
             try {
                 socketPoint.start(new SocketConfig().max(2).tied(1));
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                throw new EndPointException(e);
             }
         }).start();
 

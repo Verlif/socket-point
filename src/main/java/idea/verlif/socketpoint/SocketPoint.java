@@ -255,7 +255,7 @@ public class SocketPoint {
 
         private EndPoint target;
 
-        public final ThreadPoolExecutor CLIENT_EXECUTOR = new ThreadPoolExecutor(
+        public final ThreadPoolExecutor clientExecutor = new ThreadPoolExecutor(
                 1, 1,
                 50, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(8),
@@ -271,7 +271,7 @@ public class SocketPoint {
             target = serverEndPointFactory.create(socket);
 
             ReceiveHolder handler = receiveHolderFactory.create(target);
-            CLIENT_EXECUTOR.execute(handler);
+            clientExecutor.execute(handler);
             connectedListener.onConnected(target);
         }
 
