@@ -8,6 +8,7 @@
 
 - 无**client**与**server**的区别，统一为**SocketPoint**
 - **SocketPoint**允许接收其他**SocketPoint**连接或是连接到其他的**SocketPoint**
+- 与原生**Socket**或是**WebSocket**互通（请注意*ReceiveHolder*消息终止方式）
 - 同一个**SocketPoint**可以即是**server**也是**client**
 - 允许自定义信息传输格式化，多行文本不再会被分成多条信息发送
 - 拓展性更高的工厂模式与监听器，可以支持连接过滤、信息加密、限时连接等多种特性。
